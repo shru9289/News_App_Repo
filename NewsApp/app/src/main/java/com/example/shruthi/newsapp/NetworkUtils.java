@@ -23,7 +23,7 @@ public class NetworkUtils {
     public static final String PARAM_SORT="sortBy";
     public static final String apiKey="apiKey";
     // ToDO Insert your api key in the APPLY_API_KEY
-    public static final String APPLY_API_KEY="1303c407d5f2459999f6a170cd783347";
+    public static final String APPLY_API_KEY="";
 
 
     public static URL makeURL(String searchQuery, String sortBy){
