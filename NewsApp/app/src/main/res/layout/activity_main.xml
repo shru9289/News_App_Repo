@@ -1,42 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="80dp"
+    android:id="@+id/coordinatorLayout"
+    android:fitsSystemWindows="true"
     tools:context="com.example.shruthi.newsapp.MainActivity">
 
-    <ImageButton
-        android:id="@+id/imageButton"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/btn_star_big_on"
-        android:visibility="invisible"/>
+        android:id="@+id/appBarLayout"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-    <EditText
-        android:id="@+id/searchQuery"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint"
-        android:visibility="invisible"/>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+             />
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"/>
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+    </android.support.design.widget.AppBarLayout>
 
-        <TextView
-            android:id="@+id/displayJSON"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            />
-    </ScrollView>
+    <include layout="@layout/content_main" />
 
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
